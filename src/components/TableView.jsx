@@ -14,7 +14,7 @@ export const TableView = ({ data, theme }) => (
       <tbody>
         {data.map(([id, ele]) => (
           <tr key={id} className="text-center border-b hover:bg-gray-700">
-            <td><img src={ele.imageUrl || "https://img.lovepik.com/free-png/20220125/lovepik-artificial-intelligence-png-image_401746350_wh1200.png"} alt={ele.name} className="w-12 h-12 rounded-full" /></td>
+            <td><img src={ele.imageUrl || "https://img.freepik.com/free-vector/artificial-intelligence-face-recognition_52683-10120.jpg"} alt={ele.name} className="w-12 h-12 rounded-full" /></td>
             <td>{ele.name}</td>
             <td>{ele.email}</td>
             <td>{ele.department}</td>

@@ -21,12 +21,12 @@ export function Filters({ onFilterChange, onSortChange, onViewToggle }) {
 
   return (
     <div
-      className={`${theme ? "dark" : "light"} transition-colors duration-300 container flex flex-wrap items-center justify-between mx-auto px-4 h-16 shadow-md sticky top-0 border-b z-10 border`}
+      className={`${theme ? "dark" : "light"} transition-colors duration-300 container flex flex-col md:flex-row flex-wrap items-center justify-between mx-auto px-4 py-4 h-auto md:h-16 shadow-md sticky top-0 border-b z-10 border`}
     >
       {/* Filters Section */}
-      <div className="flex space-x-4">
+      <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mb-4 md:mb-0">
         <select
-          className="p-2 rounded-md text-gray-700"
+          className="p-2 rounded-md text-gray-700 w-full md:w-auto"
           onChange={handleFilterChange}
           defaultValue=""
           aria-label="Filter by Department"
@@ -39,7 +39,7 @@ export function Filters({ onFilterChange, onSortChange, onViewToggle }) {
         </select>
 
         <select
-          className="p-2 rounded-md text-gray-700"
+          className="p-2 rounded-md text-gray-700 w-full md:w-auto"
           onChange={handleSortChange}
           defaultValue=""
           aria-label="Sort Employees"
@@ -53,20 +53,20 @@ export function Filters({ onFilterChange, onSortChange, onViewToggle }) {
       </div>
 
       {/* Search Input Section */}
-      <div className="flex items-center rounded-md px-4 py-2">
+      <div className="flex items-center w-full md:w-auto mb-4 md:mb-0">
         <input
           type="search"
           value={searchValue}
           onChange={handleSearchChange}
           placeholder="Search Employee here..."
-          className="p-2 rounded-md w-80 text-gray-700 focus:outline-none"
+          className="p-2 rounded-md w-full md:w-80 text-gray-700 focus:outline-none"
           aria-label="Search Employees"
         />
       </div>
 
       {/* View Toggle Button */}
       <div
-        className="view-toggle cursor-pointer"
+        className="view-toggle cursor-pointer flex justify-center md:justify-end w-full md:w-auto"
         onClick={toggleView}
         title="Toggle View"
       >

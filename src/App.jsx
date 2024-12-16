@@ -7,6 +7,8 @@ import Employees from './components/Employees'
 import { Footer } from './components/Footer'
 import { Services } from './components/Services'
 import { Contact } from './components/Contact'
+import Signup from './components/Auth/signup'
+import Signin from './components/Auth/signin'
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
         <Route path='/' element={<Dashboard />} />
         <Route path='/services' element={<Services />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/sign-up' element={<Signup />} />
+        <Route path='/sign-in' element={<Signin />} />
       </Routes>
       <Footer />
     </>

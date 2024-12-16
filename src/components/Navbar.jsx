@@ -1,8 +1,9 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import { ThemeContext } from "../context/ThemeContext";
+import { AuthContext } from "../context/AuthContext";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +65,7 @@ export function Navbar() {
           {/* Authentication Section */}
           <div>
             <Link
-              to="/login"
+              to="/sign-up"
               className={`${theme
                 ? "text-gray-300 hover:text-white"
                 : "text-gray-800 hover:text-black"
@@ -114,10 +115,10 @@ export function Navbar() {
             Contact
           </Link>
           <Link
-            to="/login"
+            to="/sign-in"
             className="block hover:bg-gray-700 p-2 rounded transition duration-300"
           >
-            Login
+            Sign in
           </Link>
         </div>
       )}
